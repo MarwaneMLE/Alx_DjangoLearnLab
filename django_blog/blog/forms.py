@@ -23,7 +23,7 @@ class UserProfileForm(forms.ModelForm):
 
 class PostForm(forms.ModelForm):
     tags = forms.CharField(
-        widget=TagWidget(),
+        widgets=TagWidget(),
         required=False
     )
 
