@@ -25,7 +25,22 @@ SECRET_KEY = "django-insecure-wtw_wejkk3%nd__3hpu7@f#v%!fkaoq*4-b1#78)@apb@8l-a2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
+
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-&_x67th5pspn1s(-uf5-_t#8h74a4ghn3#n6i(!nabk_1x@^7i'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+X_FRAME_OPTIONS = 'DENY'
+# SECURITY WARNING: don't run with debug turned on in production!
+
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 # Application definition
@@ -71,9 +86,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "social_media_api.wsgi.application"
-
-AUTH_USER_MODEL = 'accounts.CustomUser'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
